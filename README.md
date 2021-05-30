@@ -3,6 +3,7 @@
 <img src="https://i.imgur.com/LauBN2N.png"/>
 
 ### konkon_client is the GUI client for the chat application Konkon.
+[Server repository](https://github.com/emredesu/konkon_client)
 
 #### Requirements:
 * C++17 (or higher)
