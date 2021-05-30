@@ -18,7 +18,7 @@
 4- Build!
 
 #### Building on Linux
-1- ¯\_(ツ)_/¯ (todo)
+1- ¯\\_(ツ)_/¯ (todo)
 
 ### Screenshots
 
