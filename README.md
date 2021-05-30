@@ -9,6 +9,7 @@
 * Qt 5.12.10 (or higher)
 * [Boost](https://www.boost.org/)
 * [nlohmann](https://github.com/nlohmann/json)
+* Icon and sfx files (get them from releases)
 
 #### Building on Windows (Visual Studio)
 1- Get QT VS Tools, set it up with your existing Qt installation
