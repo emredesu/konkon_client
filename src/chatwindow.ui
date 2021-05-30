@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatWindow</class>
+ <widget class="QWidget" name="ChatWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1011</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ChatWindow</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" rowspan="5" colspan="2">
+    <widget class="QListWidget" name="messages_list"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="send_button">
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Logout</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QLabel" name="friend_requests_label">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Friend Requests</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QListWidget" name="friend_requests_list"/>
+   </item>
+   <item row="1" column="4">
+    <widget class="QLabel" name="friends_label">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Friends</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QListWidget" name="friends_list"/>
+   </item>
+   <item row="0" column="4">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Add friend</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="CustomQTextEdit" name="message_box"/>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CustomQTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>customqtextedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>ChatWindow</receiver>
+   <slot>add_friend_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>935</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>946</x>
+     <y>-9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ChatWindow</receiver>
+   <slot>logout_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>721</x>
+     <y>533</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>727</x>
+     <y>633</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>send_button</sender>
+   <signal>clicked()</signal>
+   <receiver>ChatWindow</receiver>
+   <slot>message_send_confirmed_slot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>489</x>
+     <y>538</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>487</x>
+     <y>635</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>add_friend_button_clicked()</slot>
+  <slot>logout_button_clicked()</slot>
+  <slot>message_send_confirmed_slot()</slot>
+ </slots>
+</ui>

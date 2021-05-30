@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterWindow</class>
+ <widget class="QWidget" name="RegisterWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>369</width>
+    <height>245</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Konkon - Register</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="5" column="0" colspan="2">
+    <widget class="QLineEdit" name="password_textbox"/>
+   </item>
+   <item row="8" column="1">
+    <widget class="QPushButton" name="back_to_login_button">
+     <property name="text">
+      <string>Back to login</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="password_label">
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QLabel" name="repeat_password_label">
+     <property name="text">
+      <string>Repeat your password</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QPushButton" name="register_button">
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLineEdit" name="username_textbox"/>
+   </item>
+   <item row="7" column="0" colspan="2">
+    <widget class="QLineEdit" name="password_repeat_textbox"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="username_label">
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="username_info_label">
+     <property name="text">
+      <string>Usernames must be unique and between 3-32 characters.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QLabel" name="password_info_label">
+     <property name="text">
+      <string>Passwords must be between 6-32 characters.</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>register_button</sender>
+   <signal>clicked()</signal>
+   <receiver>RegisterWindow</receiver>
+   <slot>on_RegisterButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>back_to_login_button</sender>
+   <signal>clicked()</signal>
+   <receiver>RegisterWindow</receiver>
+   <slot>on_BackToLoginButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>273</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_RegisterButtonClicked()</slot>
+  <slot>on_BackToLoginButtonClicked()</slot>
+ </slots>
+</ui>

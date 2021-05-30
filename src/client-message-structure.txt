@@ -1,0 +1,89 @@
+--- Login request message ---
+{
+	"message-type": "login-request",
+	"username": "username",
+	"password": "password"
+}
+
+--- Registration request message ---
+{
+	"message-type": "registration-request",
+	"username": "username",
+	"password": "password"
+}
+
+--- Disconnection message ---
+{
+	"message-type": "disconnection-notification",
+	"username": "username"
+}
+
+--- Logout message ---
+{
+	"message-type": "logout-notification",
+	"username": "username"
+}
+
+--- Sending a friend request ---
+{
+	"message-type": "friend-request",
+	"from": "sender username",
+	"to": "recipient username",
+	"cookie": "sender cookie"
+}
+
+--- Sending a message ---
+{
+	"message-type": "send-message",
+	"from": "sender username",
+	"to": "recipient username",
+	"cookie": "sender cookie",
+	"message-content": "hello world"
+}
+
+--- Friend request accepted ---
+{
+	"message-type": "friend-request-response",
+	"accepted": true,
+	"request-sender": "sender",
+	"request-replier": "replier",
+	"cookie": "replier cookie"
+}
+
+--- Friend request rejected ---
+{
+	"message-type": "friend-request-response",
+	"accepted": false,
+	"request-sender": "sender",
+	"request-replier": "replier",
+	"cookie": "replier cookie"
+}
+
+--- Friend deletion request ---
+{
+	"message-type": "friend-deletion-request",
+	"username": "deleter-username",
+	"cookie": "deleter-cookie",
+	"deleted-person": "deleted-username"
+}
+
+--- Fetch messages request ---
+{
+	"message-type": "fetch-messages-request",
+	"requester": "username",
+	"cookie": "cookie",
+	"other-participant": "username",
+	"max_index": int
+}
+
+--- Online/offline check request for a single friend ---
+{
+	"message-type": "get-status",
+	"friend-username": "username"
+}
+
+--- Online/offline check request for all friends ---
+{
+	"message-type": "get-statuses",
+	"friends": ["friend1", "friend2", "and_so_on"]
+}
